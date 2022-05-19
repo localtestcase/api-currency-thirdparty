@@ -44,19 +44,21 @@ CMD [ "node", "boot-application.js" ]
 
 ### Docker Build and Docker Run Images
 ```bash
-$ docker build . -t currency-api:${ARTIFACT_VERSION}
-$ docker run -d --name currency-api-local -p 3000:3000 currency-api:${ARTIFACT_VERSION}
+$ docker build . -t currency-api
+$ docker run -d --name currency-api-local -p 8080:8080 --env PORT=8080 --env BASE_PATH=/fixer currency-api
 ```
 
 ### Local Build Expose 
 
 ```sh
+export PORT=8080
+export BASE_PATH=/fixer
 npm install
 node boot-application.js
 ```
 
 ```sh
-127.0.0.1:3000
+127.0.0.1:8080
 ```
 
 ## Postman Collection
