@@ -1,0 +1,90 @@
+{
+	"info": {
+		"_postman_id": "788292c9-dc67-4bb6-af6a-258666274a9d",
+		"name": "API-THIRDPARTY-CURRENCY",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "LOCAL_API",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "apikey",
+						"value": "OErqAKvh8bLyI0rEJtKp8EyFwNcAHgYk"
+					},
+					{
+						"key": "Cookie",
+						"value": "nspatoken=7e8c140541366987a355cc1c3dd7cf5300f1b9a8a471886f03835a8080dc6c0a"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/fixer/latest?base=USD&symbols=PEN",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"fixer",
+						"latest"
+					],
+					"query": [
+						{
+							"key": "base",
+							"value": "USD"
+						},
+						{
+							"key": "symbols",
+							"value": "PEN"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EXTERNAL_API",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "apiKey",
+						"value": "OErqAKvh8bLyI0rEJtKp8EyFwNcAHgYk",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://api.apilayer.com/fixer/latest?base=USD&symbols=EUR,PEN",
+					"protocol": "https",
+					"host": [
+						"api",
+						"apilayer",
+						"com"
+					],
+					"path": [
+						"fixer",
+						"latest"
+					],
+					"query": [
+						{
+							"key": "base",
+							"value": "USD"
+						},
+						{
+							"key": "symbols",
+							"value": "EUR,PEN"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
